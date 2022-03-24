@@ -29,10 +29,10 @@ app.post("/", function(req,res){
         res.redirect("/");
     })
     const jsonData=JSON.stringify(data);
-    const url="https://us6.api.mailchimp.com/3.0/lists/80273ca378";
+    const url="https://us6.api.mailchimp.com/3.0/lists/(List-Id)";
     const options = {
         method:"POST",
-        auth:"damini1:eb1f068062dcb9e01e25b895f0180ad8-us6"
+        auth:"(mailChimp-API-key)"
     }
     
 const request = https.request(url, options, function(response) {
@@ -55,7 +55,3 @@ app.listen(3000,function(){
 });
 
 
-// mailChimp API key
-// eb1f068062dcb9e01e25b895f0180ad8-us6 
-// List Id
-// 80273ca378
